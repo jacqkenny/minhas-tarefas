@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const EstiloGlobal = createGlobalStyle`
 * {
@@ -8,6 +8,5 @@ const EstiloGlobal = createGlobalStyle`
   font-family: Roboto, sans-serif;
 }
 `
-
 
 export default EstiloGlobal
