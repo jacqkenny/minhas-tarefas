@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type Props = {
-  ativo?:boolean
+  ativo?: boolean
 }
 
 const FiltroCard = (props: Props) => (
