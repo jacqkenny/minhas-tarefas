@@ -1,15 +1,15 @@
-import BarraLateral from "./containers/BarraLateral"
-import ListaDeTarefas from "./containers/ListaDeTarefas"
-import EstiloGlobal, { Container } from "./styles"
+import BarraLateral from './containers/BarraLateral'
+import ListaDeTarefas from './containers/ListaDeTarefas'
+import EstiloGlobal, { Container } from './styles'
 
 function App() {
   return (
     <>
-    <EstiloGlobal/>
-    <Container>
-      <BarraLateral/>
-      <ListaDeTarefas/>
-    </Container>
+      <EstiloGlobal />
+      <Container>
+        <BarraLateral />
+        <ListaDeTarefas />
+      </Container>
     </>
   )
 }
