@@ -21,34 +21,31 @@ const BarraLateral = () => {
         />
         <S.Filtros>
           <FiltroCard
-          valor={enums.Status.PENDENTE}
-          criterio="status"
-          legenda="pendentes"
+            valor={enums.Status.PENDENTE}
+            criterio="status"
+            legenda="pendentes"
           />
           <FiltroCard
-          valor={enums.Status.CONCLUIDA}
-          criterio="status"
-          legenda="concluídas"
+            valor={enums.Status.CONCLUIDA}
+            criterio="status"
+            legenda="concluídas"
           />
           <FiltroCard
-          valor={enums.Prioridade.URGENTE}
-          criterio="prioridade"
-          legenda="urgentes"
+            valor={enums.Prioridade.URGENTE}
+            criterio="prioridade"
+            legenda="urgentes"
           />
           <FiltroCard
-          valor={enums.Prioridade.IMPORTANTE}
-          criterio="prioridade"
-          legenda="importantes"
+            valor={enums.Prioridade.IMPORTANTE}
+            criterio="prioridade"
+            legenda="importantes"
           />
           <FiltroCard
-          valor={enums.Prioridade.NORMAL}
-          criterio="prioridade"
-          legenda="normal"
+            valor={enums.Prioridade.NORMAL}
+            criterio="prioridade"
+            legenda="normal"
           />
-          <FiltroCard
-          criterio="todas"
-          legenda="todas"
-          />
+          <FiltroCard criterio="todas" legenda="todas" />
         </S.Filtros>
       </div>
     </S.Aside>
