@@ -5,7 +5,7 @@ import * as S from './styles'
 
 import * as enums from '../../utils/enums/Tarefa'
 
-import {remover, editar } from '../../store/reducers/tarefas'
+import { remover, editar } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
 
 type Props = TarefaClass
@@ -21,8 +21,8 @@ const Tarefa = ({
   const [estaEditando, setEstaEditando] = useState(false)
   const [descricao, setDescricao] = useState('')
 
-  useEffect( () => {
-    if (descricaoOriginal.length >0 ) {
+  useEffect(() => {
+    if (descricaoOriginal.length > 0) {
       setDescricao(descricaoOriginal)
     }
   }, [descricaoOriginal])
@@ -37,31 +37,35 @@ const Tarefa = ({
       <S.Titulo>{titulo}</S.Titulo>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}
-        </S.Tag>
+      </S.Tag>
       <S.Tag parametro="status" status={status}>
         {status}
       </S.Tag>
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}
-        onChange={evento => setDescricao(evento.target.value)}
+        onChange={(evento) => setDescricao(evento.target.value)}
       />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
-            <S.BotaoSalvar onClick={() => {
-              dispatch(editar({
-                descricao,
-                prioridade,
-                status,
-                titulo,
-                id
-            })
-          )
-          setEstaEditando(false)
-            }}>Salvar</S.BotaoSalvar>
-            <S.BotaoCancelarRemover
-              onClick={cancelarEdicao}>
+            <S.BotaoSalvar
+              onClick={() => {
+                dispatch(
+                  editar({
+                    descricao,
+                    prioridade,
+                    status,
+                    titulo,
+                    id
+                  })
+                )
+                setEstaEditando(false)
+              }}
+            >
+              Salvar
+            </S.BotaoSalvar>
+            <S.BotaoCancelarRemover onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarRemover>
           </>
@@ -70,7 +74,7 @@ const Tarefa = ({
             <S.Botao onClick={() => setEstaEditando(true)}>Editar</S.Botao>
             <S.BotaoCancelarRemover onClick={() => dispatch(remover(id))}>
               Remover
-              </S.BotaoCancelarRemover>
+            </S.BotaoCancelarRemover>
           </>
         )}
       </S.BarraAcoes>
