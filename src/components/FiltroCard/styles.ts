@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-type props = {
+type Props = {
   ativo: boolean
 }
 
@@ -12,6 +12,7 @@ export const Card = styled.div<Props>`
   border-radius: 8px;
   cursor: pointer;
 `
+
 export const Contador = styled.span`
   font-weight: bold;
   font-size: 24px;

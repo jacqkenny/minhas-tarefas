@@ -12,7 +12,7 @@ const rotas = createBrowserRouter ([
   },
   {
     path: '/novo',
-    element: <h1>Nova tarefa</h1>
+    element: <Cadastro/>
   }
 ])
 
